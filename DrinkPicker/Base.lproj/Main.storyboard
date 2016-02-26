@@ -1,25 +1,1045 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrinkPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="xrQ-XA-P11"/>
+                        <viewControllerLayoutGuide type="bottom" id="VL9-Nc-3kI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE1-tp-HSD">
+                                <rect key="frame" x="225" y="20" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tE1-tp-HSD" secondAttribute="height" multiplier="1:1" id="AEb-Rg-nUl"/>
+                                    <constraint firstAttribute="height" constant="160" id="d6a-wp-lei"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="latte1.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AEb-Rg-nUl"/>
+                                        <exclude reference="d6a-wp-lei"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="AEb-Rg-nUl"/>
+                                        <include reference="d6a-wp-lei"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="latteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ze1-8e-QvE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h2-BL-cGk" userLabel="latte_milk_button">
+                                <rect key="frame" x="302" y="157" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3h2-BL-cGk" secondAttribute="height" multiplier="1:1" id="1Zf-bb-d5E"/>
+                                    <constraint firstAttribute="height" constant="100" id="Uxd-vQ-X7g"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="latte_milk.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Zf-bb-d5E"/>
+                                        <exclude reference="Uxd-vQ-X7g"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="1Zf-bb-d5E"/>
+                                        <include reference="Uxd-vQ-X7g"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="latteMilkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pF3-20-tFb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQj-iW-y6e">
+                                <rect key="frame" x="410" y="157" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UQj-iW-y6e" secondAttribute="height" multiplier="1:1" id="Jod-oU-3dQ"/>
+                                    <constraint firstAttribute="height" constant="100" id="gkR-A8-3ga"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="tea_size.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jod-oU-3dQ"/>
+                                        <exclude reference="gkR-A8-3ga"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Jod-oU-3dQ"/>
+                                        <include reference="gkR-A8-3ga"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="teaSizeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ubR-84-itE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbB-YY-wTs">
+                                <rect key="frame" x="500" y="157" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HbB-YY-wTs" secondAttribute="height" multiplier="1:1" id="Nke-5c-rxB"/>
+                                    <constraint firstAttribute="height" constant="100" id="gO2-bJ-RDM"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="tea_type.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Nke-5c-rxB"/>
+                                        <exclude reference="gO2-bJ-RDM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Nke-5c-rxB"/>
+                                        <include reference="gO2-bJ-RDM"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="teaTypeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcn-2V-8yF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZQ-JI-K9N">
+                                <rect key="frame" x="0.0" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MZQ-JI-K9N" secondAttribute="height" multiplier="1:1" id="gyf-Js-2Kr"/>
+                                    <constraint firstAttribute="height" constant="100" id="oQu-IF-UXD"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="coffee_size12.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gyf-Js-2Kr"/>
+                                        <exclude reference="oQu-IF-UXD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="gyf-Js-2Kr"/>
+                                        <include reference="oQu-IF-UXD"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="coffeeSize12Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wOB-pn-Xme"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-WE-cTn">
+                                <rect key="frame" x="0.0" y="341" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dxk-WE-cTn" secondAttribute="height" multiplier="1:1" id="4hu-Kq-ay3"/>
+                                    <constraint firstAttribute="height" constant="100" id="SCw-DU-jfF"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="coffee_size16.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4hu-Kq-ay3"/>
+                                        <exclude reference="SCw-DU-jfF"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="4hu-Kq-ay3"/>
+                                        <include reference="SCw-DU-jfF"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="coffeeSize16Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iBc-jA-hUo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUw-gg-b1d">
+                                <rect key="frame" x="108" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aUw-gg-b1d" secondAttribute="height" multiplier="1:1" id="EgV-wZ-zbg"/>
+                                    <constraint firstAttribute="height" constant="100" id="SNn-bO-zwV"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" image="coffee_brewLight.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EgV-wZ-zbg"/>
+                                        <exclude reference="SNn-bO-zwV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="EgV-wZ-zbg"/>
+                                        <include reference="SNn-bO-zwV"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="coffeeBrewLightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Qc-2R-rQZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfX-G9-y4R">
+                                <rect key="frame" x="108" y="341" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cfX-G9-y4R" secondAttribute="height" multiplier="1:1" id="PZE-VE-2Tq"/>
+                                    <constraint firstAttribute="height" constant="100" id="v63-C4-HNA"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="coffee_brewDark.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PZE-VE-2Tq"/>
+                                        <exclude reference="v63-C4-HNA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="PZE-VE-2Tq"/>
+                                        <include reference="v63-C4-HNA"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="coffeeBrewDarkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a12-mE-e3g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8h4-rl-9Oe">
+                                <rect key="frame" x="204" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="48g-2Z-OEP"/>
+                                    <constraint firstAttribute="width" secondItem="8h4-rl-9Oe" secondAttribute="height" multiplier="1:1" id="fqr-II-ZSP"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="latte_size12.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="48g-2Z-OEP"/>
+                                        <exclude reference="fqr-II-ZSP"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="48g-2Z-OEP"/>
+                                        <include reference="fqr-II-ZSP"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="latteSize12Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xnc-qt-hdJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKy-M4-588">
+                                <rect key="frame" x="204" y="341" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="pBP-1U-fXg"/>
+                                    <constraint firstAttribute="width" secondItem="wKy-M4-588" secondAttribute="height" multiplier="1:1" id="zrI-j5-zaG"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="latte_size16.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pBP-1U-fXg"/>
+                                        <exclude reference="zrI-j5-zaG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="pBP-1U-fXg"/>
+                                        <include reference="zrI-j5-zaG"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="latteSize16Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C7v-FR-drl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ali-cO-4CU">
+                                <rect key="frame" x="302" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="IwK-Gc-LK8"/>
+                                    <constraint firstAttribute="width" secondItem="ali-cO-4CU" secondAttribute="height" multiplier="1:1" id="eHg-H0-aY7"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="latte_milkWhole.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IwK-Gc-LK8"/>
+                                        <exclude reference="eHg-H0-aY7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="IwK-Gc-LK8"/>
+                                        <include reference="eHg-H0-aY7"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="latteMilkWholeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hpv-wv-Gva"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04v-bC-OLz">
+                                <rect key="frame" x="302" y="341" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="04v-bC-OLz" secondAttribute="height" multiplier="1:1" id="BmS-4Q-w2D"/>
+                                    <constraint firstAttribute="height" constant="100" id="JXr-ba-SJb"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="latte_milkSkim.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BmS-4Q-w2D"/>
+                                        <exclude reference="JXr-ba-SJb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="BmS-4Q-w2D"/>
+                                        <include reference="JXr-ba-SJb"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="latteMilkSkimButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="igT-qi-F3D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcX-HO-hJ6">
+                                <rect key="frame" x="410" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EcX-HO-hJ6" secondAttribute="height" multiplier="1:1" id="LDK-zw-dfN"/>
+                                    <constraint firstAttribute="height" constant="100" id="UwQ-kC-Jcr"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="tea_size12.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LDK-zw-dfN"/>
+                                        <exclude reference="UwQ-kC-Jcr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="LDK-zw-dfN"/>
+                                        <include reference="UwQ-kC-Jcr"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="teaSize12Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNX-Jg-Oux"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfa-Vs-uCN">
+                                <rect key="frame" x="410" y="341" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dMI-Gn-Iif"/>
+                                    <constraint firstAttribute="width" secondItem="Qfa-Vs-uCN" secondAttribute="height" multiplier="1:1" id="uAk-na-2Jx"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="tea_size16.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dMI-Gn-Iif"/>
+                                        <exclude reference="uAk-na-2Jx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="dMI-Gn-Iif"/>
+                                        <include reference="uAk-na-2Jx"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="teaSize16Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6c-gR-O3d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joZ-P9-1kd">
+                                <rect key="frame" x="500" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="d3j-La-8he"/>
+                                    <constraint firstAttribute="width" secondItem="joZ-P9-1kd" secondAttribute="height" multiplier="1:1" id="t9C-aP-NhI"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="tea_typeGreen.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="d3j-La-8he"/>
+                                        <exclude reference="t9C-aP-NhI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="d3j-La-8he"/>
+                                        <include reference="t9C-aP-NhI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="teaTypeGreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qqm-we-Vdb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe0-G0-FlU">
+                                <rect key="frame" x="500" y="341" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="RBg-fz-dot"/>
+                                    <constraint firstAttribute="width" secondItem="fe0-G0-FlU" secondAttribute="height" multiplier="1:1" id="fkI-Co-WFY"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="tea_typeBlack.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RBg-fz-dot"/>
+                                        <exclude reference="fkI-Co-WFY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="RBg-fz-dot"/>
+                                        <include reference="fkI-Co-WFY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="teaTypeBlackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4kb-lG-zFy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-kq-2ZO">
+                                <rect key="frame" x="500" y="436" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s1Y-kq-2ZO" secondAttribute="height" multiplier="1:1" id="0kD-ze-Jfr"/>
+                                    <constraint firstAttribute="height" constant="100" id="dbX-2Q-27z"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="tea_typeHerbal.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0kD-ze-Jfr"/>
+                                        <exclude reference="dbX-2Q-27z"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="0kD-ze-Jfr"/>
+                                        <include reference="dbX-2Q-27z"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="teaTypeHerbalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e65-Fg-ncM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPl-eM-Ua0" userLabel="coffee_brew_button">
+                                <rect key="frame" x="108" y="157" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="V9T-o1-vIS"/>
+                                    <constraint firstAttribute="width" secondItem="QPl-eM-Ua0" secondAttribute="height" multiplier="1:1" id="dqx-uh-I9A"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="coffee_brew.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="V9T-o1-vIS"/>
+                                        <exclude reference="dqx-uh-I9A"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="V9T-o1-vIS"/>
+                                        <include reference="dqx-uh-I9A"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="coffeeBrewButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWg-SL-Vhp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63a-Fe-9OJ">
+                                <rect key="frame" x="302" y="436" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="63a-Fe-9OJ" secondAttribute="height" multiplier="1:1" id="089-88-bAi"/>
+                                    <constraint firstAttribute="height" constant="100" id="fKd-zC-Ge1"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="latte_milkSoy.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="089-88-bAi"/>
+                                        <exclude reference="fKd-zC-Ge1"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="089-88-bAi"/>
+                                        <include reference="fKd-zC-Ge1"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="latteMilkSoyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKI-KX-ddW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-Fp-II5">
+                                <rect key="frame" x="204" y="157" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KJG-69-7G0"/>
+                                    <constraint firstAttribute="width" secondItem="Fwp-Fp-II5" secondAttribute="height" multiplier="1:1" id="bdW-Qv-nG7"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="latte_size.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KJG-69-7G0"/>
+                                        <exclude reference="bdW-Qv-nG7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="KJG-69-7G0"/>
+                                        <include reference="bdW-Qv-nG7"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="latteSizeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLL-am-dUC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUC-2G-SGs">
+                                <rect key="frame" x="430" y="20" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="XXB-Z2-Flz"/>
+                                    <constraint firstAttribute="width" secondItem="qUC-2G-SGs" secondAttribute="height" multiplier="1:1" id="jqq-Xj-1Ah"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="tea1.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XXB-Z2-Flz"/>
+                                        <exclude reference="jqq-Xj-1Ah"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="XXB-Z2-Flz"/>
+                                        <include reference="jqq-Xj-1Ah"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="teaButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWz-Z5-umB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5I-yn-6C4">
+                                <rect key="frame" x="30" y="20" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="F5I-yn-6C4" secondAttribute="height" multiplier="1:1" id="qP4-mZ-4Gg"/>
+                                    <constraint firstAttribute="height" constant="160" id="xaQ-si-fag"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="coffee1.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qP4-mZ-4Gg"/>
+                                        <exclude reference="xaQ-si-fag"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="qP4-mZ-4Gg"/>
+                                        <include reference="xaQ-si-fag"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="coffeeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6n-Ij-Itx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0g-nM-dRG" userLabel="coffee_size_button">
+                                <rect key="frame" x="0.0" y="157" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O0g-nM-dRG" secondAttribute="height" multiplier="1:1" id="Lj9-jK-YT1"/>
+                                    <constraint firstAttribute="height" constant="100" id="Zli-Ed-8uS"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="2.2250738585072014e-308"/>
+                                <state key="normal" title="Button" image="coffee_size.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lj9-jK-YT1"/>
+                                        <exclude reference="Zli-Ed-8uS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="Lj9-jK-YT1"/>
+                                        <include reference="Zli-Ed-8uS"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="coffeeSizeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfa-3e-GUK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95t-aO-6Ov">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e1I-Mc-kVb"/>
+                                    <constraint firstAttribute="width" secondItem="95t-aO-6Ov" secondAttribute="height" multiplier="23:15" id="pCr-kg-qvR"/>
+                                </constraints>
+                                <state key="normal" title="Pay"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="e1I-Mc-kVb"/>
+                                        <exclude reference="pCr-kg-qvR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="e1I-Mc-kVb"/>
+                                        <include reference="pCr-kg-qvR"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="Csu-rR-bsO" kind="show" id="Qvg-tk-KZA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4b-WW-c3h">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="y4b-WW-c3h" secondAttribute="height" multiplier="1:1" id="H93-jC-1MQ"/>
+                                    <constraint firstAttribute="width" constant="100" id="eMh-yC-k8k"/>
+                                </constraints>
+                                <state key="normal" image="ok.jpg"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="H93-jC-1MQ"/>
+                                        <exclude reference="eMh-yC-k8k"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="H93-jC-1MQ"/>
+                                        <include reference="eMh-yC-k8k"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="36" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="axJ-3c-fzZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="axJ-3c-fzZ" secondAttribute="height" multiplier="277:128" id="ZVX-hp-bYs"/>
+                                    <constraint firstAttribute="width" constant="277" id="rWr-E1-tBb"/>
+                                </constraints>
+                                <color key="separatorColor" red="0.36078431372549019" green="0.71764705882352942" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="sxw-Lm-BBK" customClass="CustomTableViewCell" customModule="DrinkPicker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sxw-Lm-BBK" id="wEG-nN-CIa">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="35.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xt9-fA-RRK">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="Fnj-TN-bZQ"/>
+                                                        <constraint firstAttribute="width" secondItem="Xt9-fA-RRK" secondAttribute="height" multiplier="2:1" id="mBm-7P-RP1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Fnj-TN-bZQ"/>
+                                                            <exclude reference="mBm-7P-RP1"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=regular">
+                                                        <mask key="constraints">
+                                                            <include reference="Fnj-TN-bZQ"/>
+                                                            <include reference="mBm-7P-RP1"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hru-ME-2eC">
+                                                    <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=regular" fixedFrame="YES">
+                                                        <rect key="frame" x="216" y="2" width="42" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xt9-fA-RRK" firstAttribute="leading" secondItem="wEG-nN-CIa" secondAttribute="leadingMargin" constant="18" id="Xn7-LW-los"/>
+                                                <constraint firstItem="Xt9-fA-RRK" firstAttribute="top" secondItem="wEG-nN-CIa" secondAttribute="topMargin" constant="-6" id="cho-a0-BRB"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="Xt9-fA-RRK"/>
+                                                    <exclude reference="hru-ME-2eC"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="Xn7-LW-los"/>
+                                                    <exclude reference="cho-a0-BRB"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=regular">
+                                                <mask key="subviews">
+                                                    <include reference="Xt9-fA-RRK"/>
+                                                    <include reference="hru-ME-2eC"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="Xn7-LW-los"/>
+                                                    <include reference="cho-a0-BRB"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="drinkName" destination="wEG-nN-CIa" id="mOH-tW-mB2"/>
+                                            <outlet property="drinkPrice" destination="hru-ME-2eC" id="lGl-vr-Zar"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZVX-hp-bYs"/>
+                                        <exclude reference="rWr-E1-tBb"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ZVX-hp-bYs"/>
+                                        <include reference="rWr-E1-tBb"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nnK-wC-zbj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="PEc-1Q-cLO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qfa-Vs-uCN" firstAttribute="leading" secondItem="04v-bC-OLz" secondAttribute="trailing" constant="46" id="0RD-fP-i44"/>
+                            <constraint firstItem="EcX-HO-hJ6" firstAttribute="top" secondItem="UQj-iW-y6e" secondAttribute="bottom" id="0Tv-gj-UMk"/>
+                            <constraint firstItem="QPl-eM-Ua0" firstAttribute="top" secondItem="F5I-yn-6C4" secondAttribute="bottom" id="1co-X9-uQm"/>
+                            <constraint firstItem="joZ-P9-1kd" firstAttribute="leading" secondItem="63a-Fe-9OJ" secondAttribute="trailing" constant="146" id="1gv-FG-zIh"/>
+                            <constraint firstItem="cfX-G9-y4R" firstAttribute="leading" secondItem="dxk-WE-cTn" secondAttribute="trailing" id="23F-Bb-mz6"/>
+                            <constraint firstItem="ali-cO-4CU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="2ad-gV-X0U"/>
+                            <constraint firstItem="qUC-2G-SGs" firstAttribute="leading" secondItem="tE1-tp-HSD" secondAttribute="trailing" constant="86" id="4Wv-I5-1wv"/>
+                            <constraint firstItem="04v-bC-OLz" firstAttribute="top" secondItem="ali-cO-4CU" secondAttribute="bottom" id="5k1-mk-pVv"/>
+                            <constraint firstItem="UQj-iW-y6e" firstAttribute="leading" secondItem="3h2-BL-cGk" secondAttribute="trailing" constant="46" id="7EB-HW-vhH"/>
+                            <constraint firstItem="Qfa-Vs-uCN" firstAttribute="leading" secondItem="ali-cO-4CU" secondAttribute="trailing" constant="46" id="8wl-l5-c9f"/>
+                            <constraint firstItem="aUw-gg-b1d" firstAttribute="leading" secondItem="MZQ-JI-K9N" secondAttribute="trailing" id="9aa-WT-Mhh"/>
+                            <constraint firstItem="wKy-M4-588" firstAttribute="leading" secondItem="cfX-G9-y4R" secondAttribute="trailing" constant="44" id="9ad-ie-tQh"/>
+                            <constraint firstItem="HbB-YY-wTs" firstAttribute="leading" secondItem="UQj-iW-y6e" secondAttribute="trailing" id="9bJ-W0-UtV"/>
+                            <constraint firstItem="Qfa-Vs-uCN" firstAttribute="leading" secondItem="04v-bC-OLz" secondAttribute="trailing" constant="46" id="9bu-rd-4CW"/>
+                            <constraint firstItem="ali-cO-4CU" firstAttribute="leading" secondItem="8h4-rl-9Oe" secondAttribute="trailing" id="9eZ-vu-QMz"/>
+                            <constraint firstItem="joZ-P9-1kd" firstAttribute="top" secondItem="fe0-G0-FlU" secondAttribute="bottom" id="AA2-Iv-8Ug"/>
+                            <constraint firstItem="fe0-G0-FlU" firstAttribute="top" secondItem="s1Y-kq-2ZO" secondAttribute="bottom" id="AGI-1u-Qhd"/>
+                            <constraint firstItem="04v-bC-OLz" firstAttribute="top" secondItem="ali-cO-4CU" secondAttribute="bottom" id="BK8-QY-KJs"/>
+                            <constraint firstItem="63a-Fe-9OJ" firstAttribute="top" secondItem="04v-bC-OLz" secondAttribute="bottom" id="CYN-k5-OTn"/>
+                            <constraint firstItem="Qfa-Vs-uCN" firstAttribute="top" secondItem="EcX-HO-hJ6" secondAttribute="bottom" id="D4q-ls-CyL"/>
+                            <constraint firstItem="MZQ-JI-K9N" firstAttribute="top" secondItem="O0g-nM-dRG" secondAttribute="bottom" id="F6X-68-GW7"/>
+                            <constraint firstItem="wKy-M4-588" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="FLL-MW-0yr"/>
+                            <constraint firstItem="aUw-gg-b1d" firstAttribute="leading" secondItem="MZQ-JI-K9N" secondAttribute="trailing" id="H8S-RG-K3u"/>
+                            <constraint firstItem="tE1-tp-HSD" firstAttribute="leading" secondItem="F5I-yn-6C4" secondAttribute="trailing" constant="82" id="H9p-yb-hgX"/>
+                            <constraint firstItem="wKy-M4-588" firstAttribute="top" secondItem="8h4-rl-9Oe" secondAttribute="bottom" id="JUG-iZ-v66"/>
+                            <constraint firstItem="fe0-G0-FlU" firstAttribute="leading" secondItem="Qfa-Vs-uCN" secondAttribute="trailing" id="K4l-5H-cIt"/>
+                            <constraint firstItem="cfX-G9-y4R" firstAttribute="leading" secondItem="dxk-WE-cTn" secondAttribute="trailing" id="KGJ-G6-fkD"/>
+                            <constraint firstItem="QPl-eM-Ua0" firstAttribute="leading" secondItem="O0g-nM-dRG" secondAttribute="trailing" id="KVf-vh-o70"/>
+                            <constraint firstItem="3h2-BL-cGk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="KZi-7Y-yWA"/>
+                            <constraint firstItem="joZ-P9-1kd" firstAttribute="top" secondItem="fe0-G0-FlU" secondAttribute="bottom" id="L4u-f5-VJF"/>
+                            <constraint firstItem="Fwp-Fp-II5" firstAttribute="top" secondItem="tE1-tp-HSD" secondAttribute="bottom" id="LRr-BV-agr"/>
+                            <constraint firstItem="8h4-rl-9Oe" firstAttribute="leading" secondItem="aUw-gg-b1d" secondAttribute="trailing" constant="44" id="LYs-Eg-Vne"/>
+                            <constraint firstItem="EcX-HO-hJ6" firstAttribute="leading" secondItem="3h2-BL-cGk" secondAttribute="trailing" constant="46" id="OPd-9l-T2i"/>
+                            <constraint firstItem="ali-cO-4CU" firstAttribute="top" secondItem="3h2-BL-cGk" secondAttribute="bottom" id="OTq-YN-6VC"/>
+                            <constraint firstItem="F5I-yn-6C4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="Oww-Jc-4qZ"/>
+                            <constraint firstItem="ali-cO-4CU" firstAttribute="leading" secondItem="8h4-rl-9Oe" secondAttribute="trailing" id="PuR-9w-sHm"/>
+                            <constraint firstItem="04v-bC-OLz" firstAttribute="leading" secondItem="wKy-M4-588" secondAttribute="trailing" id="Q8g-3Q-J9S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y4b-WW-c3h" secondAttribute="trailing" constant="375" id="R0G-hn-0cj"/>
+                            <constraint firstItem="fe0-G0-FlU" firstAttribute="top" secondItem="s1Y-kq-2ZO" secondAttribute="bottom" id="SvX-hC-gxn"/>
+                            <constraint firstItem="UQj-iW-y6e" firstAttribute="top" secondItem="qUC-2G-SGs" secondAttribute="bottom" id="TiO-pF-Vub"/>
+                            <constraint firstItem="s1Y-kq-2ZO" firstAttribute="top" secondItem="HbB-YY-wTs" secondAttribute="bottom" id="UD9-YQ-3Oq"/>
+                            <constraint firstItem="3h2-BL-cGk" firstAttribute="top" secondItem="tE1-tp-HSD" secondAttribute="bottom" id="VCq-Ue-JmI"/>
+                            <constraint firstItem="Fwp-Fp-II5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="Vjb-sS-cLF"/>
+                            <constraint firstItem="04v-bC-OLz" firstAttribute="leading" secondItem="wKy-M4-588" secondAttribute="trailing" id="YMt-s0-SVg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="95t-aO-6Ov" secondAttribute="trailing" id="ZK0-kY-JQD"/>
+                            <constraint firstItem="s1Y-kq-2ZO" firstAttribute="leading" secondItem="EcX-HO-hJ6" secondAttribute="trailing" id="acW-t0-wFH"/>
+                            <constraint firstItem="04v-bC-OLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="afr-pg-7sk"/>
+                            <constraint firstItem="s1Y-kq-2ZO" firstAttribute="leading" secondItem="EcX-HO-hJ6" secondAttribute="trailing" id="at1-el-a8I"/>
+                            <constraint firstItem="cfX-G9-y4R" firstAttribute="top" secondItem="aUw-gg-b1d" secondAttribute="bottom" id="bLv-7t-b3z"/>
+                            <constraint firstItem="EcX-HO-hJ6" firstAttribute="top" secondItem="UQj-iW-y6e" secondAttribute="bottom" id="bnq-64-kB5"/>
+                            <constraint firstItem="tE1-tp-HSD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="cq3-aW-cuc"/>
+                            <constraint firstItem="VL9-Nc-3kI" firstAttribute="top" secondItem="axJ-3c-fzZ" secondAttribute="bottom" id="cqW-2k-GaC"/>
+                            <constraint firstItem="QPl-eM-Ua0" firstAttribute="leading" secondItem="O0g-nM-dRG" secondAttribute="trailing" id="dKY-2z-Gq1"/>
+                            <constraint firstItem="tE1-tp-HSD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="deX-TL-y39"/>
+                            <constraint firstItem="63a-Fe-9OJ" firstAttribute="top" secondItem="04v-bC-OLz" secondAttribute="bottom" id="dqc-wj-zqj"/>
+                            <constraint firstItem="8h4-rl-9Oe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="egu-Pm-TPQ"/>
+                            <constraint firstItem="fe0-G0-FlU" firstAttribute="leading" secondItem="Qfa-Vs-uCN" secondAttribute="trailing" id="g98-z2-IUZ"/>
+                            <constraint firstItem="VL9-Nc-3kI" firstAttribute="top" secondItem="y4b-WW-c3h" secondAttribute="bottom" constant="4" id="hre-LW-zIu"/>
+                            <constraint firstItem="8h4-rl-9Oe" firstAttribute="leading" secondItem="aUw-gg-b1d" secondAttribute="trailing" constant="44" id="iE8-ro-PoW"/>
+                            <constraint firstItem="VL9-Nc-3kI" firstAttribute="top" secondItem="95t-aO-6Ov" secondAttribute="bottom" constant="20" id="l5x-2p-uEx"/>
+                            <constraint firstItem="O0g-nM-dRG" firstAttribute="top" secondItem="F5I-yn-6C4" secondAttribute="bottom" id="lMC-cF-Ssa"/>
+                            <constraint firstItem="axJ-3c-fzZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lpi-7b-ZGv"/>
+                            <constraint firstItem="3h2-BL-cGk" firstAttribute="leading" secondItem="Fwp-Fp-II5" secondAttribute="trailing" id="mQ5-WE-OqV"/>
+                            <constraint firstItem="HbB-YY-wTs" firstAttribute="leading" secondItem="UQj-iW-y6e" secondAttribute="trailing" id="oLe-f8-3cW"/>
+                            <constraint firstItem="joZ-P9-1kd" firstAttribute="leading" secondItem="63a-Fe-9OJ" secondAttribute="trailing" constant="146" id="pDT-qh-yKo"/>
+                            <constraint firstItem="s1Y-kq-2ZO" firstAttribute="top" secondItem="HbB-YY-wTs" secondAttribute="bottom" id="pJD-g0-kUp"/>
+                            <constraint firstItem="Fwp-Fp-II5" firstAttribute="leading" secondItem="QPl-eM-Ua0" secondAttribute="trailing" constant="44" id="pkF-2L-z8i"/>
+                            <constraint firstItem="qUC-2G-SGs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="qnz-ze-9if"/>
+                            <constraint firstItem="EcX-HO-hJ6" firstAttribute="leading" secondItem="ali-cO-4CU" secondAttribute="trailing" constant="46" id="rT1-zu-L8C"/>
+                            <constraint firstItem="Qfa-Vs-uCN" firstAttribute="top" secondItem="EcX-HO-hJ6" secondAttribute="bottom" id="sRa-Zq-KRj"/>
+                            <constraint firstItem="8h4-rl-9Oe" firstAttribute="top" secondItem="Fwp-Fp-II5" secondAttribute="bottom" id="uMG-os-93E"/>
+                            <constraint firstItem="aUw-gg-b1d" firstAttribute="leading" secondItem="MZQ-JI-K9N" secondAttribute="trailing" id="vIn-xF-urO"/>
+                            <constraint firstItem="aUw-gg-b1d" firstAttribute="top" secondItem="QPl-eM-Ua0" secondAttribute="bottom" id="w6n-YB-WzM"/>
+                            <constraint firstItem="63a-Fe-9OJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="x13-qV-DTG"/>
+                            <constraint firstItem="HbB-YY-wTs" firstAttribute="top" secondItem="qUC-2G-SGs" secondAttribute="bottom" id="xsP-pb-snr"/>
+                            <constraint firstItem="wKy-M4-588" firstAttribute="top" secondItem="8h4-rl-9Oe" secondAttribute="bottom" id="y6W-09-GYV"/>
+                            <constraint firstItem="dxk-WE-cTn" firstAttribute="top" secondItem="MZQ-JI-K9N" secondAttribute="bottom" id="ySp-6e-RI3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="95t-aO-6Ov"/>
+                                <exclude reference="y4b-WW-c3h"/>
+                                <exclude reference="axJ-3c-fzZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ZK0-kY-JQD"/>
+                                <exclude reference="R0G-hn-0cj"/>
+                                <exclude reference="lpi-7b-ZGv"/>
+                                <exclude reference="Oww-Jc-4qZ"/>
+                                <exclude reference="lMC-cF-Ssa"/>
+                                <exclude reference="1co-X9-uQm"/>
+                                <exclude reference="KVf-vh-o70"/>
+                                <exclude reference="dKY-2z-Gq1"/>
+                                <exclude reference="H9p-yb-hgX"/>
+                                <exclude reference="cq3-aW-cuc"/>
+                                <exclude reference="deX-TL-y39"/>
+                                <exclude reference="F6X-68-GW7"/>
+                                <exclude reference="LRr-BV-agr"/>
+                                <exclude reference="Vjb-sS-cLF"/>
+                                <exclude reference="pkF-2L-z8i"/>
+                                <exclude reference="9aa-WT-Mhh"/>
+                                <exclude reference="H8S-RG-K3u"/>
+                                <exclude reference="vIn-xF-urO"/>
+                                <exclude reference="w6n-YB-WzM"/>
+                                <exclude reference="LYs-Eg-Vne"/>
+                                <exclude reference="egu-Pm-TPQ"/>
+                                <exclude reference="iE8-ro-PoW"/>
+                                <exclude reference="uMG-os-93E"/>
+                                <exclude reference="KZi-7Y-yWA"/>
+                                <exclude reference="VCq-Ue-JmI"/>
+                                <exclude reference="mQ5-WE-OqV"/>
+                                <exclude reference="ySp-6e-RI3"/>
+                                <exclude reference="23F-Bb-mz6"/>
+                                <exclude reference="KGJ-G6-fkD"/>
+                                <exclude reference="bLv-7t-b3z"/>
+                                <exclude reference="2ad-gV-X0U"/>
+                                <exclude reference="9eZ-vu-QMz"/>
+                                <exclude reference="OTq-YN-6VC"/>
+                                <exclude reference="PuR-9w-sHm"/>
+                                <exclude reference="9ad-ie-tQh"/>
+                                <exclude reference="FLL-MW-0yr"/>
+                                <exclude reference="JUG-iZ-v66"/>
+                                <exclude reference="y6W-09-GYV"/>
+                                <exclude reference="4Wv-I5-1wv"/>
+                                <exclude reference="qnz-ze-9if"/>
+                                <exclude reference="7EB-HW-vhH"/>
+                                <exclude reference="TiO-pF-Vub"/>
+                                <exclude reference="5k1-mk-pVv"/>
+                                <exclude reference="BK8-QY-KJs"/>
+                                <exclude reference="Q8g-3Q-J9S"/>
+                                <exclude reference="YMt-s0-SVg"/>
+                                <exclude reference="afr-pg-7sk"/>
+                                <exclude reference="0Tv-gj-UMk"/>
+                                <exclude reference="OPd-9l-T2i"/>
+                                <exclude reference="bnq-64-kB5"/>
+                                <exclude reference="rT1-zu-L8C"/>
+                                <exclude reference="9bJ-W0-UtV"/>
+                                <exclude reference="oLe-f8-3cW"/>
+                                <exclude reference="xsP-pb-snr"/>
+                                <exclude reference="CYN-k5-OTn"/>
+                                <exclude reference="dqc-wj-zqj"/>
+                                <exclude reference="x13-qV-DTG"/>
+                                <exclude reference="0RD-fP-i44"/>
+                                <exclude reference="8wl-l5-c9f"/>
+                                <exclude reference="9bu-rd-4CW"/>
+                                <exclude reference="D4q-ls-CyL"/>
+                                <exclude reference="sRa-Zq-KRj"/>
+                                <exclude reference="1gv-FG-zIh"/>
+                                <exclude reference="AA2-Iv-8Ug"/>
+                                <exclude reference="L4u-f5-VJF"/>
+                                <exclude reference="pDT-qh-yKo"/>
+                                <exclude reference="cqW-2k-GaC"/>
+                                <exclude reference="hre-LW-zIu"/>
+                                <exclude reference="l5x-2p-uEx"/>
+                                <exclude reference="AGI-1u-Qhd"/>
+                                <exclude reference="K4l-5H-cIt"/>
+                                <exclude reference="SvX-hC-gxn"/>
+                                <exclude reference="g98-z2-IUZ"/>
+                                <exclude reference="UD9-YQ-3Oq"/>
+                                <exclude reference="acW-t0-wFH"/>
+                                <exclude reference="at1-el-a8I"/>
+                                <exclude reference="pJD-g0-kUp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="95t-aO-6Ov"/>
+                                <include reference="y4b-WW-c3h"/>
+                                <include reference="axJ-3c-fzZ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ZK0-kY-JQD"/>
+                                <include reference="R0G-hn-0cj"/>
+                                <include reference="lpi-7b-ZGv"/>
+                                <include reference="Oww-Jc-4qZ"/>
+                                <include reference="lMC-cF-Ssa"/>
+                                <include reference="1co-X9-uQm"/>
+                                <include reference="KVf-vh-o70"/>
+                                <include reference="dKY-2z-Gq1"/>
+                                <include reference="H9p-yb-hgX"/>
+                                <include reference="cq3-aW-cuc"/>
+                                <include reference="deX-TL-y39"/>
+                                <include reference="F6X-68-GW7"/>
+                                <include reference="LRr-BV-agr"/>
+                                <include reference="Vjb-sS-cLF"/>
+                                <include reference="pkF-2L-z8i"/>
+                                <include reference="9aa-WT-Mhh"/>
+                                <include reference="H8S-RG-K3u"/>
+                                <include reference="vIn-xF-urO"/>
+                                <include reference="w6n-YB-WzM"/>
+                                <include reference="LYs-Eg-Vne"/>
+                                <include reference="egu-Pm-TPQ"/>
+                                <include reference="iE8-ro-PoW"/>
+                                <include reference="uMG-os-93E"/>
+                                <include reference="KZi-7Y-yWA"/>
+                                <include reference="VCq-Ue-JmI"/>
+                                <include reference="mQ5-WE-OqV"/>
+                                <include reference="ySp-6e-RI3"/>
+                                <include reference="23F-Bb-mz6"/>
+                                <include reference="KGJ-G6-fkD"/>
+                                <include reference="bLv-7t-b3z"/>
+                                <include reference="2ad-gV-X0U"/>
+                                <include reference="9eZ-vu-QMz"/>
+                                <include reference="OTq-YN-6VC"/>
+                                <include reference="PuR-9w-sHm"/>
+                                <include reference="9ad-ie-tQh"/>
+                                <include reference="FLL-MW-0yr"/>
+                                <include reference="JUG-iZ-v66"/>
+                                <include reference="y6W-09-GYV"/>
+                                <include reference="4Wv-I5-1wv"/>
+                                <include reference="qnz-ze-9if"/>
+                                <include reference="7EB-HW-vhH"/>
+                                <include reference="TiO-pF-Vub"/>
+                                <include reference="5k1-mk-pVv"/>
+                                <include reference="BK8-QY-KJs"/>
+                                <include reference="Q8g-3Q-J9S"/>
+                                <include reference="YMt-s0-SVg"/>
+                                <include reference="afr-pg-7sk"/>
+                                <include reference="0Tv-gj-UMk"/>
+                                <include reference="OPd-9l-T2i"/>
+                                <include reference="bnq-64-kB5"/>
+                                <include reference="rT1-zu-L8C"/>
+                                <include reference="9bJ-W0-UtV"/>
+                                <include reference="oLe-f8-3cW"/>
+                                <include reference="xsP-pb-snr"/>
+                                <include reference="CYN-k5-OTn"/>
+                                <include reference="dqc-wj-zqj"/>
+                                <include reference="x13-qV-DTG"/>
+                                <include reference="0RD-fP-i44"/>
+                                <include reference="8wl-l5-c9f"/>
+                                <include reference="9bu-rd-4CW"/>
+                                <include reference="D4q-ls-CyL"/>
+                                <include reference="sRa-Zq-KRj"/>
+                                <include reference="1gv-FG-zIh"/>
+                                <include reference="AA2-Iv-8Ug"/>
+                                <include reference="L4u-f5-VJF"/>
+                                <include reference="pDT-qh-yKo"/>
+                                <include reference="cqW-2k-GaC"/>
+                                <include reference="hre-LW-zIu"/>
+                                <include reference="l5x-2p-uEx"/>
+                                <include reference="AGI-1u-Qhd"/>
+                                <include reference="K4l-5H-cIt"/>
+                                <include reference="SvX-hC-gxn"/>
+                                <include reference="g98-z2-IUZ"/>
+                                <include reference="UD9-YQ-3Oq"/>
+                                <include reference="acW-t0-wFH"/>
+                                <include reference="at1-el-a8I"/>
+                                <include reference="pJD-g0-kUp"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="coffeeButtonImage" destination="F5I-yn-6C4" id="bnM-GM-FqQ"/>
+                        <outlet property="coffee_brewDark_button" destination="cfX-G9-y4R" id="fkf-hb-Fsj"/>
+                        <outlet property="coffee_brewLight_button" destination="aUw-gg-b1d" id="Lkd-Xq-H3h"/>
+                        <outlet property="coffee_brew_button" destination="QPl-eM-Ua0" id="hQX-yW-Q0y"/>
+                        <outlet property="coffee_size12_button" destination="MZQ-JI-K9N" id="EKC-3k-dAm"/>
+                        <outlet property="coffee_size16_button" destination="dxk-WE-cTn" id="Jel-lg-m5i"/>
+                        <outlet property="coffee_size_button" destination="O0g-nM-dRG" id="ASI-Mp-JIC"/>
+                        <outlet property="latteButtonImage" destination="tE1-tp-HSD" id="sm9-a7-3fB"/>
+                        <outlet property="latte_milkSkim_button" destination="04v-bC-OLz" id="Thg-F9-g7O"/>
+                        <outlet property="latte_milkSoy_button" destination="63a-Fe-9OJ" id="nny-5K-7mM"/>
+                        <outlet property="latte_milkWhole_button" destination="ali-cO-4CU" id="5nA-0D-47s"/>
+                        <outlet property="latte_milk_button" destination="3h2-BL-cGk" id="69o-fn-THC"/>
+                        <outlet property="latte_size12_button" destination="8h4-rl-9Oe" id="w81-87-uuT"/>
+                        <outlet property="latte_size16_button" destination="wKy-M4-588" id="MIq-36-vnZ"/>
+                        <outlet property="latte_size_button" destination="Fwp-Fp-II5" id="w0O-M8-3iH"/>
+                        <outlet property="tableView" destination="axJ-3c-fzZ" id="uKn-jS-FOX"/>
+                        <outlet property="teaButtonImage" destination="qUC-2G-SGs" id="mcr-SN-Gyp"/>
+                        <outlet property="tea_size12_button" destination="EcX-HO-hJ6" id="xpw-2M-rwE"/>
+                        <outlet property="tea_size16_button" destination="Qfa-Vs-uCN" id="Gbl-8y-Aop"/>
+                        <outlet property="tea_size_button" destination="UQj-iW-y6e" id="o4h-Xf-nUo"/>
+                        <outlet property="tea_typeBlack_button" destination="fe0-G0-FlU" id="gpx-mc-sLU"/>
+                        <outlet property="tea_typeGreen_button" destination="joZ-P9-1kd" id="R72-U8-QDx"/>
+                        <outlet property="tea_typeHerbal_button" destination="s1Y-kq-2ZO" id="XFH-MA-VMa"/>
+                        <outlet property="tea_type_button" destination="HbB-YY-wTs" id="4vA-5L-Rec"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="205" y="229"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XBu-lb-fFV">
+            <objects>
+                <viewController id="Csu-rR-bsO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JNb-ct-MFi"/>
+                        <viewControllerLayoutGuide type="bottom" id="xdP-1E-tm5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w96-HI-BuC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQL-sa-RNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.25" y="229"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coffee1.jpg" width="160" height="160"/>
+        <image name="coffee_brew.jpg" width="110" height="110"/>
+        <image name="coffee_brewDark.jpg" width="110" height="110"/>
+        <image name="coffee_brewLight.jpg" width="110" height="110"/>
+        <image name="coffee_size.jpg" width="110" height="110"/>
+        <image name="coffee_size12.jpg" width="110" height="110"/>
+        <image name="coffee_size16.jpg" width="110" height="110"/>
+        <image name="latte1.jpg" width="160" height="160"/>
+        <image name="latte_milk.jpg" width="110" height="110"/>
+        <image name="latte_milkSkim.jpg" width="110" height="110"/>
+        <image name="latte_milkSoy.jpg" width="110" height="110"/>
+        <image name="latte_milkWhole.jpg" width="110" height="110"/>
+        <image name="latte_size.jpg" width="110" height="110"/>
+        <image name="latte_size12.jpg" width="110" height="110"/>
+        <image name="latte_size16.jpg" width="110" height="110"/>
+        <image name="ok.jpg" width="160" height="160"/>
+        <image name="tea1.jpg" width="160" height="160"/>
+        <image name="tea_size.jpg" width="110" height="110"/>
+        <image name="tea_size12.jpg" width="110" height="110"/>
+        <image name="tea_size16.jpg" width="110" height="110"/>
+        <image name="tea_type.jpg" width="110" height="110"/>
+        <image name="tea_typeBlack.jpg" width="110" height="110"/>
+        <image name="tea_typeGreen.jpg" width="110" height="110"/>
+        <image name="tea_typeHerbal.jpg" width="110" height="110"/>
+    </resources>
 </document>
