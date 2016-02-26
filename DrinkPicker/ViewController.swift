@@ -41,8 +41,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     //tableview
     @IBOutlet weak var tableView: UITableView!
-    var drinks = ["12 oz Dark Roast Coffee", "16 oz Green Tea", "12oz Soy Latte"]
-    var price = ["2.25", "2.00", "3.75"]
+    var drinks = []
+    var price = []
     
     //**TEA**
     //main tea button
@@ -63,6 +63,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             tea_type_button.hidden = false
             teaButtonImage.setImage(UIImage(named: "tea3.jpg"), forState: UIControlState.Normal)
         }
+        checkForTea()
     }
     
     //tea-related buttons
@@ -147,7 +148,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             coffee_brew_button.hidden = false
             coffeeButtonImage.setImage(UIImage(named: "coffee3.jpg"), forState: UIControlState.Normal)
         }
-            }
+        checkForCoffee()
+    }
     
     //coffee-related buttons
     //size
@@ -221,6 +223,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             latte_milk_button.hidden = false
             latteButtonImage.setImage(UIImage(named: "latte3.jpg"), forState: UIControlState.Normal)
         }
+        checkForLatte()
         
     }
     
@@ -336,5 +339,108 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
 
     }
+    
+    //checks to see if both coffee options have been selected
+    func checkForCoffee() {
+        var coffeeRoast = ""
+        var coffeeSize = ""
+        var newCoffee = ""
+        
+        var coffeePrice = ""
+        
+        if coffee_brew_button.imageForState(UIControlState.Normal) == UIImage(named: "coffee_brewLightTrue") {
+            coffeeRoast = "Light Roast Coffee"
+            
+        } else if coffee_brew_button.imageForState(UIControlState.Normal) == UIImage(named: "coffee_brewDarkTrue") {
+            coffeeRoast = "Dark Roast Coffee"
+        }
+        
+        if coffee_size_button.imageForState(UIControlState.Normal) == UIImage(named: "coffee_size12True") {
+            coffeeSize = "12 oz. "
+            coffeePrice = "2.00"
+            
+        } else if coffee_size_button.imageForState(UIControlState.Normal) == UIImage(named: "coffee_size16True") {
+            coffeeSize = "16 oz. "
+            coffeePrice = "3.00"
+        }
+        
+        if coffeeRoast != "" && coffeeSize != "" {
+            newCoffee = coffeeSize + coffeeRoast
+            drinks.append(newCoffee)
+            price.append(coffeePrice)
+        }
+    }
+    
+    //checks to see if both latte options have been selected
+    func checkForLatte() {
+        var latteMilk = ""
+        var latteSize = ""
+        var newLatte = ""
+        
+        var lattePrice = ""
+        
+        if latte_milk_button.imageForState(UIControlState.Normal) == UIImage(named: "latte_milkSkimTrue") {
+            latteMilk = "Skim Latte"
+            
+        } else if latte_milk_button.imageForState(UIControlState.Normal) == UIImage(named: "latte_milkWholeTrue") {
+            latteMilk = "Whole Latte"
+        }
+        
+        else if latte_milk_button.imageForState(UIControlState.Normal) == UIImage(named: "latte_milkSoyTrue") {
+            latteMilk = "Soy Latte"
+        }
+        
+        if latte_size_button.imageForState(UIControlState.Normal) == UIImage(named: "latte_size12True") {
+            latteSize = "12 oz. "
+            lattePrice = "3.25"
+            
+        } else if latte_size_button.imageForState(UIControlState.Normal) == UIImage(named: "coffee_size16True") {
+            latteSize = "16 oz. "
+            lattePrice = "4.00"
+        }
+        
+        if latteMilk != "" && latteSize != "" {
+            newLatte = latteSize + latteMilk
+            drinks.append(newLatte)
+            price.append(lattePrice)
+        }
+        
+    }
+    
+    //checks to see if both tea options have been selected
+    func checkForTea() {
+        var teaType = ""
+        var teaSize = ""
+        var newTea = ""
+        
+        let teaPrice = "2.00"
+        
+        if tea_type_button.imageForState(UIControlState.Normal) == UIImage(named: "tea_typeBlackTrue") {
+            teaType = "Black Tea"
+            
+        } else if tea_type_button.imageForState(UIControlState.Normal) == UIImage(named: "tea_typeGreenTrue") {
+            teaType = "Green Tea"
+        }
+            
+        else if tea_type_button.imageForState(UIControlState.Normal) == UIImage(named: "tea_typeHerbalTrue") {
+            teaType = "Herbal Tea"
+        }
+        
+        if tea_size_button.imageForState(UIControlState.Normal) == UIImage(named: "tea_size12True") {
+            teaSize = "12 oz. "
+            
+        } else if tea_size_button.imageForState(UIControlState.Normal) == UIImage(named: "tea_size16True") {
+            teaSize = "16 oz. "
+
+        }
+        
+        if teaType != "" && teaSize != "" {
+            newTea = teaSize + teaType
+            drinks.append(newTea)
+            price.append(teaPrice)
+        }
+        
+    }
+
 }
 
